@@ -5,11 +5,11 @@
 		<field name="inherit_id" ref="sale.view_order_form"/>
 		<field name="arch" type="xml">
 			<xpath expr="//form//sheet//group[@name='order_details']" position="after">
-				<field name="cap_customer_phone_number"/>
-				<field name="cap_customer_nickname"/>
-				<field name="cap_customer_age"/>
-				<field name="cap_customer_address"/>
-				
+				<field name="cap_customer_phone_number" placeholder="Customer Phone Number" modifiers="{}"/>
+				<field name="cap_customer_nickname" placeholder="Customer Nickname" modifiers="{}"/>
+				<field name="cap_customer_age" placeholder="Customer Age" modifiers="{}"/>
+				<field name="cap_customer_address" placeholder="Customer Address" modifiers="{}"/>
+				<field name="cap_customer_favorite_genre" placeholder="Favorite Genre" modifiers="{}"/>
 			</xpath>
 		</field>
 

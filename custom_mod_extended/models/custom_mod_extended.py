@@ -12,6 +12,7 @@ class CustomModExtended(models.Model):
     cap_customer_nickname = fields.Char(string='Customer Nickname')
     cap_customer_age = fields.Integer(string='Customer Age')
     cap_customer_address = fields.Char(string='Customer Address')
+    cap_customer_favorite_genre = fields.Char(string='Favorite Genre')
     
     
     
