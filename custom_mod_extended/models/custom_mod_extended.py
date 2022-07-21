@@ -3,7 +3,7 @@
 from datetime import date
 from odoo import api, models, fields
 import logging
-#_logger = logging.getLogger(__name__)
+_logger = logging.getLogger(__name__)
 
 class CustomModExtended(models.Model):
 
@@ -18,7 +18,7 @@ class CustomModExtended(models.Model):
 
     @api.onchange('cap_customer_birth_year')
     def calculate_age(cap_customer_birth_year):
-        cap_customer_age = cap_customer_birth_year
+        cap_customer_age = date.year - cap_customer_birth_year
 
         return cap_customer_age
 
