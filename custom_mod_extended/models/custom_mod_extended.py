@@ -18,7 +18,7 @@ class CustomModExtended(models.Model):
 
     @api.onchange('cap_customer_birth_year')
     def calculate_age(cap_customer_birth_year):
-        cap_customer_age = date.year - cap_customer_birth_year
+        cap_customer_age = cap_customer_birth_year
 
         return cap_customer_age
 
