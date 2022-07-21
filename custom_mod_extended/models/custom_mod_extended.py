@@ -23,8 +23,3 @@ class CustomModExtended(models.Model):
         cap_customer_age = cap_year - cap_customer_birth_year
 
         return cap_customer_age
-
-    
-    
-    
-
