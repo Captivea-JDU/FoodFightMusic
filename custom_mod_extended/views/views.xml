@@ -5,6 +5,7 @@
 		<field name="inherit_id" ref="sale.view_order_form"/>
 		<field name="arch" type="xml">
 			<xpath expr="//form//sheet//group[@name='order_details']" position="after">
+				<field name="cap_customer_birth_year" placeholder="Customer Birth Year" modifiers="{}"/>
 				<field name="cap_customer_phone_number" placeholder="Customer Phone Number" modifiers="{}"/>
 				<field name="cap_customer_nickname" placeholder="Customer Nickname" modifiers="{}"/>
 				<field name="cap_customer_age" placeholder="Customer Age" modifiers="{}"/>
