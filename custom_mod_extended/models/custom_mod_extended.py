@@ -9,6 +9,7 @@ class CustomModExtended(models.Model):
 
     _inherit = 'sale.order'
     
+    cap_year = fields.Integer(string='Year')
     cap_customer_birth_year = fields.Integer(string='Customer Birth Year')
     cap_customer_phone_number = fields.Char(string='Customer phone number')
     cap_customer_nickname = fields.Char(string='Customer Nickname')
@@ -17,8 +18,9 @@ class CustomModExtended(models.Model):
     cap_customer_favorite_genre = fields.Char(string='Favorite Genre')
 
     @api.onchange('cap_customer_birth_year')
-    def calculate_age(cap_customer_birth_year):
-        cap_customer_age = (date.year - cap_customer_birth_year)
+    def calculate_age(cap_customer_birth_year, cap_year):
+        cap_year = 2022
+        cap_customer_age = cap_year - cap_customer_birth_year
 
         return cap_customer_age
 
