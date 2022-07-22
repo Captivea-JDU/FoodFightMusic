@@ -68,7 +68,7 @@
                                             -->
                                             <field name="cap_sequence" invisible="1"/>
                                         </group>
-										</page>
+						</page>
                                         <group attrs="{'invisible': [('cap_display_type', '!=', False)]}">
                                             <label for="cap_customer_lead"/>
                                             <div name="lead">
