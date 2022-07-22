@@ -31,32 +31,13 @@
                                     <field name="cap_product_uom_category_id" invisible="1"/>
                                     <group>
                                         <group attrs="{'invisible': [('cap_display_type', '!=', False)]}">
-                                            <field name="cap_product_id"
-                                                domain="[('sale_ok', '=', True), '|', ('cap_company_id', '=', False), ('cap_company_id', '=', parent.cap_company_id)]"
-                                                context="{'partner_id':parent.partner_id, 'quantity':cap_product_uom_qty, 'pricelist':parent.pricelist_id, 'uom':cap_product_uom, 'company_id': parent.company_id}"
-                                                attrs="{
-                                                    'required': [('cap_display_type', '=', False)],
-                                                }"
-                                                force_save="1"
-                                                widget="many2one_barcode"
-                                               />
+                                            <field name="cap_product_id"/>
                                             <field name="cap_invoice_status" invisible="1"/>
                                             <field name="cap_qty_to_invoice" invisible="1"/>
                                             <label for="cap_product_uom_qty"/>
                                             <div class="o_row" name="ordered_qty">
-                                                <field
-                                                    context="{'partner_id':parent.partner_id, 'quantity':cap_product_uom_qty, 'pricelist':parent.pricelist_id, 'uom':cap_product_uom, 'uom_qty_change':True, 'company_id': parent.company_id}"
-                                                    name="cap_product_uom_qty"/>
-                                                <field
-                                                    name="cap_product_uom"
-                                                    force_save="1"
-                                                    groups="uom.group_uom"
-                                                    class="oe_no_button"
-                                                    attrs="{
-                                                        'readonly': [('cap_product_uom_readonly', '=', True)],
-                                                        'required': [('cap_display_type', '=', False)],
-                                                    }"
-                                                />
+                                                <field name="cap_product_uom_qty"/>
+                                                <field name="cap_product_uom"/>
                                             </div>
                                             <label for="cap_qty_delivered" string="Delivered" attrs="{'invisible': [('parent.state', 'not in', ['sale', 'done'])]}"/>
                                             <div name="delivered_qty" attrs="{'invisible': [('parent.state', 'not in', ['sale', 'done'])]}">
