@@ -20,7 +20,6 @@
                                 mode="tree,kanban"
                                 attrs="{'readonly': [('state', 'in', ('done','cancel'))]}"
                             >
-				
 			</xpath>
 			
 		</field>
