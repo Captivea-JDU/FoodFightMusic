@@ -17,9 +17,9 @@ class CustomModExtended(models.Model):
     cap_customer_address = fields.Char(string='Customer Address')
     cap_customer_favorite_genre = fields.Char(string='Favorite Genre')
     
-    @api.onchange('cap_year')
-    def calculate_age(cap_year):
-        cap_year = 2023
-        cap_customer_age = cap_year
+    #@api.onchange('cap_year')
+    #def calculate_age(cap_year):
+        #cap_year = 2023
+        #cap_customer_age = cap_year
 
-        return cap_customer_age
+        #return cap_customer_age
