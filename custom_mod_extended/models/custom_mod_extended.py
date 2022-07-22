@@ -27,7 +27,7 @@ class CustomModExtended(models.Model):
     cap_qty_delivered = fields.Integer(string='Cap QTY Delivered')
     cap_qty_invoiced = fields.Integer(string='Cap QTY Invoice')
     cap_price_unit = fields.Integer(string='Cap Price Unit')
-    cap_tax_id = fields.Integer(string='Cap Tax ID')
+    cap_tax_id = fields.Char(string='Cap Tax ID')
     cap_discount = fields.Integer(string='Cap Discount')
     cap_customer_lead = fields.Char(string='Cap Customer Lead')
     cap_analytic_tag_ids = fields.Integer(string='Cap Analytic tag id')
