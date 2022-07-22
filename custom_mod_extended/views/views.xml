@@ -68,7 +68,7 @@
                                             <div name="lead">
                                                 <field name="cap_customer_lead" class="oe_inline"/> days
                                             </div>
-                                            <field name="cap_analytic_tag_ids" widget="many2many_tags" groups="analytic.group_analytic_tags" options="{'color_field': 'color'}" domain="['|', ('company_id', '=', False), ('company_id', '=', parent.company_id)]"/>
+                                            <field name="cap_analytic_tag_ids" widget="many2many_tags" groups="analytic.group_analytic_tags" options="{'color_field': 'color'}"/>
                                         </group>
                                     </group>
                                     <label for="cap_name" string="Description" attrs="{'invisible': [('cap_display_type', '!=', False)]}"/>
