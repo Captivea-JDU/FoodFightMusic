@@ -35,7 +35,7 @@ class CustomModExtended(models.Model):
     cap_invoice_lines = fields.Char(string='Cap Invoice Lines')
     cap_state = fields.Integer(string='Cap State')
     cap_company_id = fields.Char(string='Cap Company ID')
-
+    cap_product_packaging_id = fields.Char(string='Cap Product Packaging ID')
 
     #@api.onchange('cap_year')
     #def calculate_age(cap_year):
