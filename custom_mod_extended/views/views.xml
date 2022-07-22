@@ -5,7 +5,6 @@
 		<field name="inherit_id" ref="sale.view_order_form"/>
 		<field name="arch" type="xml">
 			<xpath expr="//form//sheet//group[@name='order_details']" position="after">
-
 				<field name="cap_customer_birth_year" placeholder="Customer Birth Year" modifiers="{}"/>
 				<field name="cap_customer_phone_number" placeholder="Customer Phone Number" modifiers="{}"/>
 				<field name="cap_customer_nickname" placeholder="Customer Nickname" modifiers="{}"/>
@@ -14,6 +13,15 @@
 				<field name="cap_customer_favorite_genre" placeholder="Favorite Genre" modifiers="{}"/>
 				<field name="cap_year" placeholder="Year" modifiers="{}"/>
 			</xpath>
+			<xpath expr="//form//sheet//page[@name='order_lines']" position="after">
+				<field
+					name="order_line"
+					widget="section_and_note_one2many"
+					mode="tree,kanban"
+					attrs="{'readonly': [('state', 'in', ('done','cancel'))]}"
+				>
+			</xpath>
+			
 		</field>
 
 	</record>
