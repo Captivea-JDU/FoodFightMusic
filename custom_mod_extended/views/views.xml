@@ -5,6 +5,8 @@
 		<field name="inherit_id" ref="sale.view_order_form"/>
 		<field name="arch" type="xml">
 			<xpath expr="//form//sheet//group[@name='order_details']" position="after">
+			 <field name="cap_display_type1" invisible="1"/>
+			<group attrs="{'invisible': [('cap_display_type1', '!=', False)]}">
 				<field name="cap_customer_birth_year" placeholder="Customer Birth Year" modifiers="{}"/>
 				<field name="cap_customer_phone_number" placeholder="Customer Phone Number" modifiers="{}"/>
 				<field name="cap_customer_nickname" placeholder="Customer Nickname" modifiers="{}"/>
@@ -12,6 +14,7 @@
 				<field name="cap_customer_address" placeholder="Customer Address" modifiers="{}"/>
 				<field name="cap_customer_favorite_genre" placeholder="Favorite Genre" modifiers="{}"/>
 				<field name="cap_year" placeholder="Year" modifiers="{}"/>
+			</group>
 			</xpath>
 
 			<!-- This is our order line custom tab-->
@@ -51,7 +54,7 @@
                                             </div>
                                             <field name="cap_product_packaging_id" context="{'default_product_id': cap_product_id, 'tree_view_ref':'product.product_packaging_tree_view', 'form_view_ref':'product.product_packaging_form_view'}" groups="product.group_stock_packaging" />
                                             <field name="cap_price_unit"/>
-                                            <field name="cap_tax_id" widget="many2many_tags"/>
+                                            <!--<field name="cap_tax_id" widget="many2many_tags" options="{'no_create': True}" context="{'search_view_ref': 'account.account_tax_view_search'}"/> -->
                                             <label for="cap_discount" groups="product.group_discount_per_so_line"/>
                                             <div name="discount" groups="product.group_discount_per_so_line">
                                                 <field name="cap_discount" class="oe_inline"/>

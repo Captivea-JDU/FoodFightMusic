@@ -17,6 +17,7 @@ class CustomModExtended(models.Model):
     cap_customer_address = fields.Char(string='Customer Address')
     cap_customer_favorite_genre = fields.Char(string='Favorite Genre')
     cap_display_type = fields.Char(string='Cap Display Type')
+    cap_display_type1 = fields.Char(string='Cap Display Type1')
     cap_sequence = fields.Integer(string='Cap Sequence')
     cap_product_uom_category_id = fields.Char(string='Cap Product uom Category ID')
     cap_product_id = fields.Integer(string='Product ID')
