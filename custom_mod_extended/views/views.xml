@@ -43,7 +43,7 @@
                                             <div name="delivered_qty" attrs="{'invisible': [('parent.state', 'not in', ['sale', 'done'])]}">
                                                 <field name="cap_qty_delivered" attrs="{'readonly': [('cap_qty_delivered_method', '!=', 'manual')]}"/>
                                             </div>
-                                            <label for="cap_qty_invoiced" string="Invoiced"
+                                            <label for="cap_qty_invoiced" string="Invoiced"/>
                                             <div name="invoiced_qty" attrs="{'invisible': [('parent.state', 'not in', ['sale', 'done'])]}">
                                                 <field name="cap_qty_invoiced"/>
                                             </div>
