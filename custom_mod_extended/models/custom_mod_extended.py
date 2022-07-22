@@ -17,7 +17,26 @@ class CustomModExtended(models.Model):
     cap_customer_address = fields.Char(string='Customer Address')
     cap_customer_favorite_genre = fields.Char(string='Favorite Genre')
     cap_display_type = fields.Char(string='Cap Display Type')
-    
+    cap_sequence = fields.Integer(string='Cap Sequence')
+    cap_product_uom_category_id = fields.Char(string='Cap Product uom Category ID')
+    cap_product_id = fields.Integer(string='Product ID')
+    cap_invoice_status = fields.Char(string='Cap Invoice Status')
+    cap_qty_to_invoice = fields.Integer(string='Cap QTY To Invoice')
+    cap_product_uom_qty = fields.Integer(string='Cap Product uom qty')
+    cap_product_uom = fields.Char(string='Cap Product Uom')
+    cap_qty_delivered = fields.Integer(string='Cap QTY Delivered')
+    cap_qty_invoiced = fields.Integer(string='Cap QTY Invoice')
+    cap_price_unit = fields.Integer(string='Cap Price Unit')
+    cap_tax_id = fields.Integer(string='Cap Tax ID')
+    cap_discount = fields.Integer(string='Cap Discount')
+    cap_customer_lead = fields.Char(string='Cap Customer Lead')
+    cap_analytic_tag_ids = fields.Integer(string='Cap Analytic tag id')
+    cap_name = fields.Char(string='Cap Name')
+    cap_invoice_lines = fields.Char(string='Cap Invoice Lines')
+    cap_state = fields.Integer(string='Cap State')
+    cap_company_id = fields.Char(string='Cap Company ID')
+
+
     #@api.onchange('cap_year')
     #def calculate_age(cap_year):
         #cap_year = 2023

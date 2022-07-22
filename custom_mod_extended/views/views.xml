@@ -27,60 +27,52 @@
                                         We need the sequence field to be here for new lines to be added at the correct position.
                                         TODO: at some point we want to fix this in the framework so that an invisible field is not required.
                                     -->
-                                    <field name="sequence" invisible="1"/>
+                                    <field name="cap_sequence" invisible="1"/>
                                     <field name="product_uom_category_id" invisible="1"/>
                                     <group>
                                         <group attrs="{'invisible': [('cap_display_type', '!=', False)]}">
-                                            <field name="product_updatable" invisible="1"/>
-                                            <field name="product_id"
+                                            <field name="cap_product_id"
                                                 domain="[('sale_ok', '=', True), '|', ('company_id', '=', False), ('company_id', '=', parent.company_id)]"
-                                                context="{'partner_id':parent.partner_id, 'quantity':product_uom_qty, 'pricelist':parent.pricelist_id, 'uom':product_uom, 'company_id': parent.company_id}"
+                                                context="{'partner_id':parent.partner_id, 'quantity':cap_product_uom_qty, 'pricelist':parent.pricelist_id, 'uom':cap_product_uom, 'company_id': parent.company_id}"
                                                 attrs="{
-                                                    'readonly': [('product_updatable', '=', False)],
                                                     'required': [('cap_display_type', '=', False)],
                                                 }"
                                                 force_save="1"
                                                 widget="many2one_barcode"
                                                />
-                                            <field name="invoice_status" invisible="1"/>
-                                            <field name="qty_to_invoice" invisible="1"/>
-                                            <field name="qty_delivered_manual" invisible="1"/>
-                                            <field name="qty_delivered_method" invisible="1"/>
-                                            <field name="price_total" invisible="1"/>
-                                            <field name="price_tax" invisible="1"/>
-                                            <field name="price_subtotal" invisible="1"/>
-                                            <field name="product_uom_readonly" invisible="1"/>
-                                            <label for="product_uom_qty"/>
+                                            <field name="cap_invoice_status" invisible="1"/>
+                                            <field name="cap_qty_to_invoice" invisible="1"/>
+                                            <label for="cap_product_uom_qty"/>
                                             <div class="o_row" name="ordered_qty">
                                                 <field
-                                                    context="{'partner_id':parent.partner_id, 'quantity':product_uom_qty, 'pricelist':parent.pricelist_id, 'uom':product_uom, 'uom_qty_change':True, 'company_id': parent.company_id}"
-                                                    name="product_uom_qty"/>
+                                                    context="{'partner_id':parent.partner_id, 'quantity':cap_product_uom_qty, 'pricelist':parent.pricelist_id, 'uom':cap_product_uom, 'uom_qty_change':True, 'company_id': parent.company_id}"
+                                                    name="cap_product_uom_qty"/>
                                                 <field
-                                                    name="product_uom"
+                                                    name="cap_product_uom"
                                                     force_save="1"
                                                     groups="uom.group_uom"
                                                     class="oe_no_button"
                                                     attrs="{
-                                                        'readonly': [('product_uom_readonly', '=', True)],
+                                                        'readonly': [('cap_product_uom_readonly', '=', True)],
                                                         'required': [('cap_display_type', '=', False)],
                                                     }"
                                                 />
                                             </div>
-                                            <label for="qty_delivered" string="Delivered" attrs="{'invisible': [('parent.state', 'not in', ['sale', 'done'])]}"/>
+                                            <label for="cap_qty_delivered" string="Delivered" attrs="{'invisible': [('parent.state', 'not in', ['sale', 'done'])]}"/>
                                             <div name="delivered_qty" attrs="{'invisible': [('parent.state', 'not in', ['sale', 'done'])]}">
-                                                <field name="qty_delivered" attrs="{'readonly': [('qty_delivered_method', '!=', 'manual')]}"/>
+                                                <field name="cap_qty_delivered" attrs="{'readonly': [('cap_qty_delivered_method', '!=', 'manual')]}"/>
                                             </div>
-                                            <label for="qty_invoiced" string="Invoiced" attrs="{'invisible': [('parent.state', 'not in', ['sale', 'done'])]}"/>
+                                            <label for="cap_qty_invoiced" string="Invoiced" attrs="{'invisible': [('parent.state', 'not in', ['sale', 'done'])]}"/>
                                             <div name="invoiced_qty" attrs="{'invisible': [('parent.state', 'not in', ['sale', 'done'])]}">
-                                                <field name="qty_invoiced" attrs="{'invisible': [('parent.state', 'not in', ['sale', 'done'])]}"/>
+                                                <field name="cap_qty_invoiced" attrs="{'invisible': [('parent.state', 'not in', ['sale', 'done'])]}"/>
                                             </div>
-                                            <field name="product_packaging_id" attrs="{'invisible': [('product_id', '=', False)]}" context="{'default_product_id': product_id, 'tree_view_ref':'product.product_packaging_tree_view', 'form_view_ref':'product.product_packaging_form_view'}" groups="product.group_stock_packaging" />
-                                            <field name="price_unit"/>
-                                            <field name="tax_id" widget="many2many_tags" options="{'no_create': True}" context="{'search_view_ref': 'account.account_tax_view_search'}" domain="[('type_tax_use','=','sale'), ('company_id','=',parent.company_id), ('country_id', '=', parent.tax_country_id)]"
-                                                attrs="{'readonly': [('qty_invoiced', '&gt;', 0)]}"/>
-                                            <label for="discount" groups="product.group_discount_per_so_line"/>
+                                            <field name="cap_product_packaging_id" attrs="{'invisible': [('cap_product_id', '=', False)]}" context="{'default_product_id': cap_product_id, 'tree_view_ref':'product.product_packaging_tree_view', 'form_view_ref':'product.product_packaging_form_view'}" groups="product.group_stock_packaging" />
+                                            <field name="cap_price_unit"/>
+                                            <field name="cap_tax_id" widget="many2many_tags" options="{'no_create': True}" context="{'search_view_ref': 'account.account_tax_view_search'}" domain="[('type_tax_use','=','sale'), ('company_id','=',parent.company_id), ('country_id', '=', parent.tax_country_id)]"
+                                                attrs="{'readonly': [('cap_qty_invoiced', '&gt;', 0)]}"/>
+                                            <label for="cap_discount" groups="product.group_discount_per_so_line"/>
                                             <div name="discount" groups="product.group_discount_per_so_line">
-                                                <field name="discount" class="oe_inline"/> %%
+                                                <field name="cap_discount" class="oe_inline"/> %%
                                             </div>
                                             <!--
                                                 We need the sequence field to be here
@@ -88,26 +80,26 @@
                                                 in order for new lines to be added at the correct position.
                                                 NOTE: at some point we want to fix this in the framework so that an invisible field is not required.
                                             -->
-                                            <field name="sequence" invisible="1"/>
+                                            <field name="cap_sequence" invisible="1"/>
                                         </group>
                                         <group attrs="{'invisible': [('cap_display_type', '!=', False)]}">
-                                            <label for="customer_lead"/>
+                                            <label for="cap_customer_lead"/>
                                             <div name="lead">
-                                                <field name="customer_lead" class="oe_inline"/> days
+                                                <field name="cap_customer_lead" class="oe_inline"/> days
                                             </div>
-                                            <field name="analytic_tag_ids" widget="many2many_tags" groups="analytic.group_analytic_tags" options="{'color_field': 'color'}" domain="['|', ('company_id', '=', False), ('company_id', '=', parent.company_id)]"/>
+                                            <field name="cap_analytic_tag_ids" widget="many2many_tags" groups="analytic.group_analytic_tags" options="{'color_field': 'color'}" domain="['|', ('company_id', '=', False), ('company_id', '=', parent.company_id)]"/>
                                         </group>
                                     </group>
-                                    <label for="name" string="Description" attrs="{'invisible': [('cap_display_type', '!=', False)]}"/>
-                                    <label for="name" string="Section Name (eg. Products, Services)" attrs="{'invisible': [('cap_display_type', '!=', 'line_section')]}"/>
-                                    <label for="name" string="Note" attrs="{'invisible': [('cap_display_type', '!=', 'line_note')]}"/>
-                                    <field name="name"/>
+                                    <label for="cap_name" string="Description" attrs="{'invisible': [('cap_display_type', '!=', False)]}"/>
+                                    <label for="cap_name" string="Section Name (eg. Products, Services)" attrs="{'invisible': [('cap_display_type', '!=', 'line_section')]}"/>
+                                    <label for="cap_name" string="Note" attrs="{'invisible': [('cap_display_type', '!=', 'line_note')]}"/>
+                                    <field name="cap_name"/>
                                     <div name="invoice_lines" groups="base.group_no_one" attrs="{'invisible': [('cap_display_type', '!=', False)]}">
-                                        <label for="invoice_lines"/>
-                                        <field name="invoice_lines"/>
+                                        <label for="cap_invoice_lines"/>
+                                        <field name="cap_invoice_lines"/>
                                     </div>
-                                    <field name="state" invisible="1"/>
-                                    <field name="company_id" invisible="1"/>
+                                    <field name="cap_state" invisible="1"/>
+                                    <field name="cap_company_id" invisible="1"/>
                                 </form>
 			</xpath>
 			
