@@ -28,7 +28,7 @@
                                         TODO: at some point we want to fix this in the framework so that an invisible field is not required.
                                     -->
                                     <field name="cap_sequence" invisible="1"/>
-                                    <field name="product_uom_category_id" invisible="1"/>
+                                    <field name="cap_product_uom_category_id" invisible="1"/>
                                     <group>
                                         <group attrs="{'invisible': [('cap_display_type', '!=', False)]}">
                                             <field name="cap_product_id"
