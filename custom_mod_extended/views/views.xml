@@ -22,7 +22,7 @@
                             >
 				</field>
 				<form>
-                                    <field name="display_type" invisible="1"/>
+                                    <field name="cap_display_type" invisible="1"/>
                                     <!--
                                         We need the sequence field to be here for new lines to be added at the correct position.
                                         TODO: at some point we want to fix this in the framework so that an invisible field is not required.
@@ -30,14 +30,14 @@
                                     <field name="sequence" invisible="1"/>
                                     <field name="product_uom_category_id" invisible="1"/>
                                     <group>
-                                        <group attrs="{'invisible': [('display_type', '!=', False)]}">
+                                        <group attrs="{'invisible': [('cap_display_type', '!=', False)]}">
                                             <field name="product_updatable" invisible="1"/>
                                             <field name="product_id"
                                                 domain="[('sale_ok', '=', True), '|', ('company_id', '=', False), ('company_id', '=', parent.company_id)]"
                                                 context="{'partner_id':parent.partner_id, 'quantity':product_uom_qty, 'pricelist':parent.pricelist_id, 'uom':product_uom, 'company_id': parent.company_id}"
                                                 attrs="{
                                                     'readonly': [('product_updatable', '=', False)],
-                                                    'required': [('display_type', '=', False)],
+                                                    'required': [('cap_display_type', '=', False)],
                                                 }"
                                                 force_save="1"
                                                 widget="many2one_barcode"
@@ -62,7 +62,7 @@
                                                     class="oe_no_button"
                                                     attrs="{
                                                         'readonly': [('product_uom_readonly', '=', True)],
-                                                        'required': [('display_type', '=', False)],
+                                                        'required': [('cap_display_type', '=', False)],
                                                     }"
                                                 />
                                             </div>
@@ -90,7 +90,7 @@
                                             -->
                                             <field name="sequence" invisible="1"/>
                                         </group>
-                                        <group attrs="{'invisible': [('display_type', '!=', False)]}">
+                                        <group attrs="{'invisible': [('cap_display_type', '!=', False)]}">
                                             <label for="customer_lead"/>
                                             <div name="lead">
                                                 <field name="customer_lead" class="oe_inline"/> days
@@ -98,11 +98,11 @@
                                             <field name="analytic_tag_ids" widget="many2many_tags" groups="analytic.group_analytic_tags" options="{'color_field': 'color'}" domain="['|', ('company_id', '=', False), ('company_id', '=', parent.company_id)]"/>
                                         </group>
                                     </group>
-                                    <label for="name" string="Description" attrs="{'invisible': [('display_type', '!=', False)]}"/>
-                                    <label for="name" string="Section Name (eg. Products, Services)" attrs="{'invisible': [('display_type', '!=', 'line_section')]}"/>
-                                    <label for="name" string="Note" attrs="{'invisible': [('display_type', '!=', 'line_note')]}"/>
+                                    <label for="name" string="Description" attrs="{'invisible': [('cap_display_type', '!=', False)]}"/>
+                                    <label for="name" string="Section Name (eg. Products, Services)" attrs="{'invisible': [('cap_display_type', '!=', 'line_section')]}"/>
+                                    <label for="name" string="Note" attrs="{'invisible': [('cap_display_type', '!=', 'line_note')]}"/>
                                     <field name="name"/>
-                                    <div name="invoice_lines" groups="base.group_no_one" attrs="{'invisible': [('display_type', '!=', False)]}">
+                                    <div name="invoice_lines" groups="base.group_no_one" attrs="{'invisible': [('cap_display_type', '!=', False)]}">
                                         <label for="invoice_lines"/>
                                         <field name="invoice_lines"/>
                                     </div>

@@ -16,6 +16,7 @@ class CustomModExtended(models.Model):
     cap_customer_age = fields.Integer(string='Customer Age')
     cap_customer_address = fields.Char(string='Customer Address')
     cap_customer_favorite_genre = fields.Char(string='Favorite Genre')
+    cap_display_type = fields.Char(string='Cap Display Type')
     
     #@api.onchange('cap_year')
     #def calculate_age(cap_year):
