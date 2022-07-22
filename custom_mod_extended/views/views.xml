@@ -14,7 +14,13 @@
 				<field name="cap_year" placeholder="Year" modifiers="{}"/>
 			</xpath>
 			<xpath expr="//form//sheet//page[@name='order_lines']" position="after">
-				
+				<field
+                                name="order_line"
+                                widget="section_and_note_one2many"
+                                mode="tree,kanban"
+                                attrs="{'readonly': [('state', 'in', ('done','cancel'))]}"
+                            >
+				</field>
 			</xpath>
 			
 		</field>
