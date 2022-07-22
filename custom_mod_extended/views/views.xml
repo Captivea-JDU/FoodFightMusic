@@ -19,6 +19,7 @@
 
 			<!-- This is our order line custom tab-->
 			<xpath expr="//form//sheet//page[@name='order_lines']" position="after">
+				<page string="Custom Tab Boi" >
 				<!--<field
                                 name="order_line"
                                 widget="section_and_note_one2many"
