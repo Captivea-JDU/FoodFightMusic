@@ -32,7 +32,7 @@
                                     <group>
                                         <group attrs="{'invisible': [('cap_display_type', '!=', False)]}">
                                             <field name="cap_product_id"
-                                                domain="[('sale_ok', '=', True), '|', ('company_id', '=', False), ('company_id', '=', parent.company_id)]"
+                                                domain="[('sale_ok', '=', True), '|', ('cap_company_id', '=', False), ('cap_company_id', '=', parent.cap_company_id)]"
                                                 context="{'partner_id':parent.partner_id, 'quantity':cap_product_uom_qty, 'pricelist':parent.pricelist_id, 'uom':cap_product_uom, 'company_id': parent.company_id}"
                                                 attrs="{
                                                     'required': [('cap_display_type', '=', False)],
