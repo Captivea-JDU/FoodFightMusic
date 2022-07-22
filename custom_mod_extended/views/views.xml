@@ -39,18 +39,17 @@
                                                 <field name="cap_product_uom_qty"/>
                                                 <field name="cap_product_uom"/>
                                             </div>
-                                            <label for="cap_qty_delivered" string="Delivered" attrs="{'invisible': [('parent.state', 'not in', ['sale', 'done'])]}"/>
+                                            <label for="cap_qty_delivered" string="Delivered"/>
                                             <div name="delivered_qty" attrs="{'invisible': [('parent.state', 'not in', ['sale', 'done'])]}">
                                                 <field name="cap_qty_delivered" attrs="{'readonly': [('cap_qty_delivered_method', '!=', 'manual')]}"/>
                                             </div>
-                                            <label for="cap_qty_invoiced" string="Invoiced" attrs="{'invisible': [('parent.state', 'not in', ['sale', 'done'])]}"/>
+                                            <label for="cap_qty_invoiced" string="Invoiced"
                                             <div name="invoiced_qty" attrs="{'invisible': [('parent.state', 'not in', ['sale', 'done'])]}">
-                                                <field name="cap_qty_invoiced" attrs="{'invisible': [('parent.state', 'not in', ['sale', 'done'])]}"/>
+                                                <field name="cap_qty_invoiced"/>
                                             </div>
-                                            <field name="cap_product_packaging_id" attrs="{'invisible': [('cap_product_id', '=', False)]}" context="{'default_product_id': cap_product_id, 'tree_view_ref':'product.product_packaging_tree_view', 'form_view_ref':'product.product_packaging_form_view'}" groups="product.group_stock_packaging" />
+                                            <field name="cap_product_packaging_id" context="{'default_product_id': cap_product_id, 'tree_view_ref':'product.product_packaging_tree_view', 'form_view_ref':'product.product_packaging_form_view'}" groups="product.group_stock_packaging" />
                                             <field name="cap_price_unit"/>
-                                            <field name="cap_tax_id" widget="many2many_tags" options="{'no_create': True}" context="{'search_view_ref': 'account.account_tax_view_search'}"
-                                                attrs="{'readonly': [('cap_qty_invoiced', '&gt;', 0)]}"/>
+                                            <field name="cap_tax_id" widget="many2many_tags" options="{'no_create': True}" context="{'search_view_ref': 'account.account_tax_view_search'}"/>
                                             <label for="cap_discount" groups="product.group_discount_per_so_line"/>
                                             <div name="discount" groups="product.group_discount_per_so_line">
                                                 <field name="cap_discount" class="oe_inline"/> %%
