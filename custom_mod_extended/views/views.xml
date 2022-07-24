@@ -14,8 +14,6 @@
 				<field name="cap_customer_address" placeholder="Customer Address" modifiers="{}"/>
 				<field name="cap_customer_favorite_genre" placeholder="Favorite Genre" modifiers="{}"/>
 				<field name="cap_year" placeholder="Year" modifiers="{}"/>
-				<field widget="radio" name="cap_selection_field"/>
-				<field widget="radio" name="cap_four_math"/>
 			</group>
 			</xpath>
 			<xpath expr="//field[@name='payment_term_id']" postion="after">
