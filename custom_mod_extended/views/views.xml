@@ -16,7 +16,7 @@
 				<field name="cap_year" placeholder="Year" modifiers="{}"/>
 			</group>
 			</xpath>
-			<xpath expr="//field[@name=payment_term_id]" postion="after">
+			<xpath expr="//field[@field=payment_term_id]" postion="after">
 				<field widget="radio" name="cap_selection_field"/>
 				<field widget="radio" name="cap_four_math"/>
 			</xpath>
