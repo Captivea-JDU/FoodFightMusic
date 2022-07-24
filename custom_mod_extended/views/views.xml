@@ -1,6 +1,6 @@
 <odoo>
 	<record id="sales_view" model="ir.ui.view"> 
-	<script>
+					<script>
 						$('#myModal').on('shown.bs.modal', function () {
   						$('#myInput').trigger('focus')
 						})
