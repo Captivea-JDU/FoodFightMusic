@@ -17,8 +17,8 @@
 			</group>
 			</xpath>
 			<xpath expr="//field[@name=payment_term_id]" postion="after">
-							<field widget="radio" name="cap_selection_field"/>
-							<field widget="radio" name="cap_four_math"/>
+				<field widget="radio" name="cap_selection_field"/>
+				<field widget="radio" name="cap_four_math"/>
 			</xpath>
 
 			<!-- This is our order line custom tab-->
