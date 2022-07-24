@@ -93,7 +93,6 @@
 					</page>	
 			</xpath>
 			<xpath expr="//form" position="inside">
-			<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 										<script>
 											$('#myModal').on('shown.bs.modal', function () {
 											$('#myInput').trigger('focus')
