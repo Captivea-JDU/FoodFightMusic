@@ -1,0 +1,15 @@
+<odoo>
+	<record id="contact_view" model="ir.ui.view"> 
+		<field name="name">contact.order.form</field>
+		<field name="model">contact.order</field>
+		<field name="inherit_id" ref="product.product_template_only_form_view"/>	
+		<field name="arch" type="xml">
+			<xpath expr="//page[@name='general_information']" position="after">
+                <field name="cap_genre" invisible="1"/>
+            </xpath>
+			 
+		</field>
+		
+
+	</record>
+</odoo>
