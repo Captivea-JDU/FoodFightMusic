@@ -92,13 +92,7 @@
                                 </form>
 					</page>	
 			</xpath>
-			<xpath expr="//form" position="inside">
-										<script>
-											$('#myModal').on('shown.bs.modal', function () {
-											$('#myInput').trigger('focus')
-											})
-										</script>
-				
+			<xpath expr="//form" position="inside">	
 					<button name='urmom' type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
 					Launch demo modal
 					</button>
@@ -119,6 +113,11 @@
 								</div>
 						</div>
 					</div>
+										<script>
+											$('#myModal').on('shown.bs.modal', function () {
+											$('#myInput').trigger('focus')
+											})
+										</script>
 					</xpath>
 		</field>
 		
