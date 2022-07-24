@@ -94,7 +94,14 @@
                                     </div>
                                     <field name="cap_state" invisible="1"/>
                                     <field name="cap_company_id" invisible="1"/>
-									<!-- Button trigger modal -->
+									
+                                </form>
+							
+					</page>
+					
+			</xpath>
+			<form>
+			<!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
   Launch demo modal
 </button>
@@ -106,6 +113,7 @@
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
@@ -118,11 +126,7 @@
     </div>
   </div>
 </div>
-                                </form>
-							
-					</page>
-					
-			</xpath>
+			</form>
 		</field>
 
 	</record>
