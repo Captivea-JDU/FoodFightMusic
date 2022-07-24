@@ -93,18 +93,15 @@
                                         <field name="cap_invoice_lines"/>
                                     </div>
                                     <field name="cap_state" invisible="1"/>
-                                    <field name="cap_company_id" invisible="1"/>
-									
+                                    <field name="cap_company_id" invisible="1"/>		
                                 </form>
-							
-					</page>
-					
+					</page>	
 			</xpath>
 			<xpath expr="//form" position="inside">
 
 					<form>
 				
-					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+					<button name='urmom' type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
 					Launch demo modal
 					</button>
 
@@ -119,8 +116,8 @@
 							...
 						</div>
 						<div class="modal-footer">
-							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-							<button type="button" class="btn btn-primary">Save changes</button>
+							<button name='urdad' type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							<button name='urbro' type="button" class="btn btn-primary">Save changes</button>
 						</div>
 						</div>
 					</div>
