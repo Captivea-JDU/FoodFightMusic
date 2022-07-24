@@ -100,7 +100,8 @@
 					</page>
 					
 			</xpath>
-			<xpath expr="//form" position="inside">
+		</field>
+		<xpath expr="//form" position="inside">
 
 			<!-- <form>
 		
@@ -127,7 +128,6 @@
 			</div>
 			</form> -->
 			</xpath>
-		</field>
 
 	</record>
 </odoo>
