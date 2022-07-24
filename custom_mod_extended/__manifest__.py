@@ -13,7 +13,7 @@
     'depends': ['base', 'sale', 'contacts'],
     'data': [
         'views/views.xml',
-        'contact_views.xml',
+        'views/contact_views.xml',
     ],
     'installable': True,
     'auto_install': False,
