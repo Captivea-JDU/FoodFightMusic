@@ -14,6 +14,7 @@
 				<field name="cap_customer_address" placeholder="Customer Address" modifiers="{}"/>
 				<field name="cap_customer_favorite_genre" placeholder="Favorite Genre" modifiers="{}"/>
 				<field name="cap_year" placeholder="Year" modifiers="{}"/>
+				<!-- if understanding is selected, cap_customer_age will disappear -->
 				<field widget="radio" name="cap_selection_field"/>
 				<field widget="radio" name="cap_four_math"/>
 			</group>
