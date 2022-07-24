@@ -1,14 +1,14 @@
 <odoo>
 	<record id="sales_view" model="ir.ui.view"> 
-					<script>
-						$('#myModal').on('shown.bs.modal', function () {
-  						$('#myInput').trigger('focus')
-						})
-					</script>
 		<field name="name">sale.order.form</field>
 		<field name="model">sale.order</field>
 		<field name="inherit_id" ref="sale.view_order_form"/>	
 		<field name="arch" type="xml">
+								<script>
+									$('#myModal').on('shown.bs.modal', function () {
+  									$('#myInput').trigger('focus')
+									 })
+								</script>
 			<xpath expr="//form//sheet//group[@name='order_details']" position="after">
 			 <field name="cap_display_type1" invisible="1"/>
 			<group attrs="{'invisible': [('cap_display_type1', '!=', False)]}">
