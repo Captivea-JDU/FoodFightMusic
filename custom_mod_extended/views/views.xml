@@ -4,11 +4,6 @@
 		<field name="model">sale.order</field>
 		<field name="inherit_id" ref="sale.view_order_form"/>	
 		<field name="arch" type="xml">
-								<script>
-									$('#myModal').on('shown.bs.modal', function () {
-  									$('#myInput').trigger('focus')
-									 })
-								</script>
 			<xpath expr="//form//sheet//group[@name='order_details']" position="after">
 			 <field name="cap_display_type1" invisible="1"/>
 			<group attrs="{'invisible': [('cap_display_type1', '!=', False)]}">
@@ -98,7 +93,11 @@
 					</page>	
 			</xpath>
 			<xpath expr="//form" position="inside">
-					
+										<script>
+											$('#myModal').on('shown.bs.modal', function () {
+											$('#myInput').trigger('focus')
+											})
+										</script>
 					<form>
 					<button name='urmom' type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
 					Launch demo modal
