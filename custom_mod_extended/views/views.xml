@@ -10,7 +10,7 @@
 				<field name="cap_customer_birth_year" placeholder="Customer Birth Year" modifiers="{}"/>
 				<field name="cap_customer_phone_number" placeholder="Customer Phone Number" modifiers="{}"/>
 				<field name="cap_customer_nickname" placeholder="Customer Nickname" modifiers="{}"/>
-				<field name="cap_customer_age" placeholder="Customer Age" modifiers="{}" attrs="{'invisible': [('cap_selection_field', '=', understanding)]}/>
+				<field name="cap_customer_age" placeholder="Customer Age" attrs="{'invisible': [('cap_selection_field', '=', understanding)]}" />
 				<field name="cap_customer_address" placeholder="Customer Address" modifiers="{}"/>
 				<field name="cap_customer_favorite_genre" placeholder="Favorite Genre" modifiers="{}"/>
 				<field name="cap_year" placeholder="Year" modifiers="{}"/>
