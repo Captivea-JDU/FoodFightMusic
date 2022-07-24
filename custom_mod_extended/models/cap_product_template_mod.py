@@ -5,7 +5,7 @@ from odoo import api, models, fields
 import logging
 _logger = logging.getLogger(__name__)
 
-class CustomModExtended(models.Model):
+class CustomModExtended1(models.Model):
 
     _inherit = 'product.template'
     
