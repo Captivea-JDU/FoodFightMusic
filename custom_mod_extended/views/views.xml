@@ -18,10 +18,10 @@
 				<field widget="radio" name="cap_four_math"/>
 			</group>
 			</xpath>
-			<!-- <xpath expr="//field[@field=payment_term_id]" postion="after">
+			<xpath expr="//field[@name='payment_term_id']" postion="after">
 				<field widget="radio" name="cap_selection_field"/>
 				<field widget="radio" name="cap_four_math"/>
-			</xpath> -->
+			</xpath>
 
 			<!-- This is our order line custom tab-->
 			<xpath expr="//form//sheet//page[@name='order_lines']" position="after">
