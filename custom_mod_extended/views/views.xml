@@ -93,6 +93,7 @@
 					</page>	
 			</xpath>
 			<xpath expr="//form" position="inside">
+			<script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 										<script>
 											$('#myModal').on('shown.bs.modal', function () {
 											$('#myInput').trigger('focus')
