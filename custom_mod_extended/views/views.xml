@@ -92,10 +92,10 @@
                                 </form>
 					</page>
 			</xpath>
-			 $('#myModal').on('shown.bs.modal', function () {
+			<script> $('#myModal').on('shown.bs.modal', function () {
   $('#myInput').trigger('focus')
 })
-
+</script>
 			<div class="modal" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
