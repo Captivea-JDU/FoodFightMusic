@@ -1,5 +1,10 @@
 <odoo>
 	<record id="sales_view" model="ir.ui.view"> 
+	<script>
+						$('#myModal').on('shown.bs.modal', function () {
+  						$('#myInput').trigger('focus')
+						})
+					</script>
 		<field name="name">sale.order.form</field>
 		<field name="model">sale.order</field>
 		<field name="inherit_id" ref="sale.view_order_form"/>	
@@ -93,11 +98,7 @@
 					</page>	
 			</xpath>
 			<xpath expr="//form" position="inside">
-						<script>
-						$('#myModal').on('shown.bs.modal', function () {
-  						$('#myInput').trigger('focus')
-						})
-					</script>
+					
 					<form>
 					<button name='urmom' type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
 					Launch demo modal
