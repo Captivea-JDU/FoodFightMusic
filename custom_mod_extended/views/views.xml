@@ -90,24 +90,12 @@
                                     <field name="cap_state" invisible="1"/>
                                     <field name="cap_company_id" invisible="1"/>
                                 </form>
-								<script>
-								$('#myModal').on('shown.bs.modal', function () {
-  								$('#myInput').trigger('focus')
-								})
-								</script>
-								
-								
-								
-						
+							
 					</page>
 					
 			</xpath>
 			
 		</field>
-		<!-- Button trigger modal -->
-								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
- 								 Launch demo modal
-								</button>
 
 	</record>
 </odoo>
