@@ -100,7 +100,7 @@
 					</page>
 					
 			</xpath>
-			<xpath expr="//form" position="after">
+			<xpath expr="//form" position="inside">
 
 			<form>
 			<!-- Button trigger modal -->
@@ -127,7 +127,7 @@
 			</div>
 			</div>
 			</form>
-</xpath>
+			</xpath>
 		</field>
 
 	</record>
