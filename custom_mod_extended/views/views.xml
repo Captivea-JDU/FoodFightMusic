@@ -2,11 +2,7 @@
 	<record id="sales_view" model="ir.ui.view"> 
 		<field name="name">sale.order.form</field>
 		<field name="model">sale.order</field>
-		<field name="inherit_id" ref="sale.view_order_form"/>
-		
-		$('#myModal').on('shown.bs.modal', function () {
-  			$('#myInput').trigger('focus')
-		})
+		<field name="inherit_id" ref="sale.view_order_form"/>	
 		<field name="arch" type="xml">
 			<xpath expr="//form//sheet//group[@name='order_details']" position="after">
 			 <field name="cap_display_type1" invisible="1"/>
@@ -99,6 +95,11 @@
 			<xpath expr="//form" position="inside">
 
 					<form>
+					<script>
+						$('#myModal').on('shown.bs.modal', function () {
+  						$('#myInput').trigger('focus')
+						})
+					</script>
 					<button name='urmom' type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
 					Launch demo modal
 					</button>
