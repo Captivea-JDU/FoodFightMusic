@@ -19,7 +19,7 @@
 
 <menuitem id="sale_example"
     name="Sale Example"
-    parent="sale.menu_root"
+    parent="sale.sale.menu_root"
     action="
         sale_example_action
         "
