@@ -6,7 +6,7 @@
 <field name="arch" type="xml">
 <form string="Sale Order">
 <h1>Are you ready to lose some money?</h1>
-<!-- Button trigger modal
+<!-- Button trigger modal -->
 <button name="urmomm" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
   Launch Sports Betting
 </button>
@@ -32,7 +32,7 @@
       </div>
     </div>
   </div>
-</div> -->
+</div>
 </form>
 </field>
 </record>
