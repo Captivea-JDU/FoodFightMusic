@@ -21,10 +21,10 @@
         </button>
       </div>
       <div class="modal-body">
-        <a href="https://www.draftkings.com">Draft Kings</a>
-        <a href="https://www.outlastdfs.com">Outlast</a>
-        <a href="https://www.fanduel.com">fanduel</a>
-        <a href="https://codes.jockmkt.com">Jock</a>
+        <a href="https://www.draftkings.com">Draft Kings</a><br>
+        <a href="https://www.outlastdfs.com">Outlast</a><br>
+        <a href="https://www.fanduel.com">fanduel</a><br>
+        <a href="https://codes.jockmkt.com">Jock</a><br>
       </div>
       <div class="modal-footer">
         <button name="urbro" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
