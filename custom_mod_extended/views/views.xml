@@ -93,7 +93,7 @@
                                 </form>
 					</page>	
 			</xpath>
-			<xpath expr="//form" position="inside">	
+			<!-- <xpath expr="//form" position="inside">	
 					<button name='urmom' type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
 					Launch demo modal
 					</button>
@@ -115,7 +115,7 @@
 						</div>
 					</div>
                     </form>
-					</xpath>
+					</xpath> -->
 		</field>
 		
 
