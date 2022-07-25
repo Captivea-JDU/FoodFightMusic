@@ -10,9 +10,9 @@
     'license': 'OPL-1',
     'description': """Overrides the display name of contacts for delivery addresses
         """,
-    'depends': ['base', 'products'],
+    'depends': ['base', 'product'],
     'data': [
-        # 'views/products_view.xml',
+        # 'views/contacts_view.xml',
     ],
     'installable': True,
     'auto_install': False,
