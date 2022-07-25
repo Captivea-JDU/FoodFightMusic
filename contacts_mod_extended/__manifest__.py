@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 {
-    'name': 'Cap_Products ',
+    'name': 'Cap_Products',
     'category': 'Products',
     'summary': "Overrides functionality of display name on Contact Model",
     'version': '1.0 (v13)',
@@ -10,7 +10,7 @@
     'license': 'OPL-1',
     'description': """Overrides the display name of contacts for delivery addresses
         """,
-    'depends': ['products'],
+    'depends': ['base', 'products'],
     'data': [
         'views/contacts_view.xml',
     ],
