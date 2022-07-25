@@ -40,6 +40,7 @@
 <record id="sale_example_action" model="ir.actions.act_window">
 <field name="name">urmom</field>
 <field name="type">ir.actions.act_window</field>
+<field name="target">inline</field>
 <field name="res_model">sale.order</field>
 <field name="view_mode">form</field>
 </record>
