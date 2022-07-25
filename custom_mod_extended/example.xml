@@ -1,0 +1,29 @@
+<odoo>
+<data>
+
+<record id="example_form" model="ir.ui.view">
+<field name="model">sale.order</field>
+<field name="arch" type="xml">
+<form string="Sale Order">
+<h1>Sale Order</h1>
+</form>
+</field>
+</record>
+
+<record id="sale_example_action" model="ir.actions.act_window">
+<field name="name">urmom</field>
+<field name="type">ir.actions.act_window</field>
+<field name="res_model">sale.order</field>
+<field name="view_mode">form</field>
+</record>
+
+<menuitem id="sale_example"
+    name="Sale Example"
+    parent="sale.menu_root"
+    action="
+        sale_example_action
+        "
+    sequence="50"/>
+
+</data>
+</odoo>

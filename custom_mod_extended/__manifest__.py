@@ -13,6 +13,7 @@
     'depends': ['base', 'sale'],
     'data': [
         'views/views.xml',
+        'views/example.xml',
     ],
     'installable': True,
     'auto_install': False,
