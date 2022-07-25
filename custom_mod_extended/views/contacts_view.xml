@@ -6,7 +6,7 @@
 		<field name="arch" type="xml">
 			<xpath expr="//page[@name='general_information']" position="after">
              <field name="cap_display_type1" invisible="1"/>
-				<group attrs="{'invisible': [('cap_display_type1', '!=', False)]}">
+				<group attrs="{'invisible': [('cap_display_type1', '=', False)]}">
                 <field name="cap_genre" invisible="1"/>
                 </group>
             </xpath>
