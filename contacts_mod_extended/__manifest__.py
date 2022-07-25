@@ -12,7 +12,7 @@
         """,
     'depends': ['base', 'products'],
     'data': [
-        'views/products_view.xml',
+        # 'views/products_view.xml',
     ],
     'installable': True,
     'auto_install': False,
