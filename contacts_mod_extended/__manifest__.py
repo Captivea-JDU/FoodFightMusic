@@ -12,7 +12,7 @@
         """,
     'depends': ['base', 'product'],
     'data': [
-        # 'views/contacts_view.xml',
+        'views/contacts_view.xml',
     ],
     'installable': True,
     'auto_install': False,
