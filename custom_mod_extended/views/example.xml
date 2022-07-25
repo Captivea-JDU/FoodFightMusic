@@ -5,10 +5,10 @@
 <field name="model">sale.order</field>
 <field name="arch" type="xml">
 <form string="Sale Order">
-<h1>Sports Betting</h1>
+<h1>Are you ready to lose some money?</h1>
 <!-- Button trigger modal -->
 <button name="urmomm" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Launch demo modal
+  Launch Sports Betting
 </button>
 
 <!-- Modal -->
