@@ -20,10 +20,7 @@
 <menuitem id="sale_example"
     name="Sale Example"
     parent="sale.sale.menu_root"
-    action="
-        sale_example_action
-        "
-    sequence="50"/>
+    action="sale_example_action"/>
 
 </data>
 </odoo>
