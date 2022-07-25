@@ -1,5 +1,5 @@
 <odoo>
-	<record id="contact_view" model="ir.ui.view"> 
+	<record id="contacts_view" model="ir.ui.view"> 
 		<field name="name">contact.order.form</field>
 		<field name="model">product.template</field>
 		<field name="inherit_id" ref="product.product_template_only_form_view"/>	
