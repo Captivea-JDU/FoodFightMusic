@@ -1,1 +1,1 @@
-from . import contacts_mod_extended
+from . import custom_mod_extended
