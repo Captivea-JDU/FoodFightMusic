@@ -7,7 +7,7 @@
             <xpath expr="//field[@name='standard_price']" position="after">
             <field name="cap_display_type1" invisible="1"/>
 				<group attrs="{'invisible': [('cap_display_type1', '!=', False)]}">
-                <field name="cap_genre" placeholder="Genre"/>
+                <field name="cap_genre" string="Genre" placeholder="Genre"/>
                 </group>
             </xpath>
         </field>
