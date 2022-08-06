@@ -7,7 +7,7 @@
             <xpath expr="//field[@name='invoice_policy']" position="after">
             <field name="cap_display_type1" invisible="1"/>
 				<group attrs="{'invisible': [('cap_display_type1', '!=', False)]}">
-                <field name="cap_genre" string="Margin" placeholder="Margin"/>
+                <field name="cap_genre" string="Profit Margin" placeholder="Margin"/>
                 </group>
             </xpath>
         </field>
