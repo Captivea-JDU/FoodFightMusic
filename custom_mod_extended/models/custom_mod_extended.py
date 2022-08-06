@@ -40,7 +40,6 @@ class CustomModExtended(models.Model):
     cap_product_packaging_id = fields.Char(string='Cap Product Packaging ID')
     cap_selection_field = fields.Selection([('knowledge', 'Knowledge'),('wisdom', 'Wisdom'),('understanding', 'Understanding')], string='Cap Selection Field')
     cap_four_math = fields.Selection([('freedom', 'Freedom'),('culture', 'Culture'),('power', 'Power'),('refinement', 'Refinement')], string='Todays Mathmatics')
-    cap_margin = fields.Integer(string='Cap Margin')
 
     #@api.onchange('cap_year')
     #def calculate_age(cap_year):

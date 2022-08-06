@@ -11,3 +11,4 @@ class CustomModExtended1(models.Model):
     
     cap_genre = fields.Char(string='Genre')
     cap_display_type1 = fields.Char(string='Cap Display Type1')
+    cap_margin = fields.Integer(string='Cap Margin')
