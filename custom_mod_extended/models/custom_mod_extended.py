@@ -8,7 +8,6 @@ _logger = logging.getLogger(__name__)
 class CustomModExtended(models.Model):
 
     _inherit = 'sale.order'
-    _inherit = 'product.template'
     
     cap_year = fields.Integer(string='Year')
     cap_customer_birth_year = fields.Integer(string='Customer Birth Year')
