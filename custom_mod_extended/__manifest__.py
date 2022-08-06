@@ -3,12 +3,12 @@
 {
     'name': 'Custom Module',
     'category': 'Sales',
-    'summary': "Fuck these lame ahh mfs man, do you",
+    'summary': "This is a custom module",
     'version': '1.0 (v13)',
     'author': 'Captivea software Consulting, Jarvis Dumas',
     'website': 'https://www.captivea.com/',
     'license': 'OPL-1',
-    'description': """Fuck these lame ahh mfs man, do you
+    'description': """This is a custom module
         """,
     'depends': ['base', 'sale'],
     'data': [
