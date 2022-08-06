@@ -10,6 +10,8 @@
                 <field name="cap_genre" string="Profit Margin" placeholder="Margin"/>
                 </group>
             </xpath>
+            <xpath expr="//field[@name='barcode']" position="replace">
+            </xpath>
         </field>
     </record>
 </odoo>
