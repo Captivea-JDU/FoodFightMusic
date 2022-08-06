@@ -1,0 +1,11 @@
+<odoo>
+    <record id="product_template_view" model="ir.ui.view">
+        <field name="name">product.template.product.form</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='standard_price']" position="after">
+                <field name="cap_margin" placeholder="Margin"/>
+            </xpath>
+        </field>
+</odoo>
