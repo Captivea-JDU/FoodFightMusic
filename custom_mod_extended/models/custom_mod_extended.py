@@ -8,6 +8,7 @@ _logger = logging.getLogger(__name__)
 class CustomModExtended(models.Model):
 
     _inherit = 'sale.order'
+    _inherit = 'product.template'
     
     cap_year = fields.Integer(string='Year')
     cap_customer_birth_year = fields.Integer(string='Customer Birth Year')
@@ -39,6 +40,7 @@ class CustomModExtended(models.Model):
     cap_product_packaging_id = fields.Char(string='Cap Product Packaging ID')
     cap_selection_field = fields.Selection([('knowledge', 'Knowledge'),('wisdom', 'Wisdom'),('understanding', 'Understanding')], string='Cap Selection Field')
     cap_four_math = fields.Selection([('freedom', 'Freedom'),('culture', 'Culture'),('power', 'Power'),('refinement', 'Refinement')], string='Todays Mathmatics')
+    cap_margin = fields.Integer(string='Cap Margin')
 
     #@api.onchange('cap_year')
     #def calculate_age(cap_year):
