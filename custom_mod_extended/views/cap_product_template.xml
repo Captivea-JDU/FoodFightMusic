@@ -5,7 +5,10 @@
         <field name="inherit_id" ref="product.product_template_only_form_view"/>
         <field name="arch" type="xml">
             <xpath expr="//field[@name='standard_price']" position="after">
+             <field name="cap_display_type1" invisible="1"/>
+				<group attrs="{'invisible': [('cap_display_type1', '!=', False)]}">
                 <field name="cap_genre" placeholder="Genre"/>
+                </group>
             </xpath>
         </field>
     </record>
