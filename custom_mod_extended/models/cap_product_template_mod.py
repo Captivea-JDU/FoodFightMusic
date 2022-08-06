@@ -10,6 +10,5 @@ class CustomModExtended1(models.Model):
     _inherit = 'product.template'
     
     cap_genre = fields.Char(string='Genre')
-    cap_genre1 = fields.Char(string='Genre1')
     cap_display_type1 = fields.Char(string='Cap Display Type1')
     cap_margin = fields.Integer(string='Cap Margin')

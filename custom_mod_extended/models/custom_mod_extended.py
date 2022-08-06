@@ -34,6 +34,7 @@ class CustomModExtended(models.Model):
     cap_customer_lead = fields.Char(string='Cap Customer Lead')
     cap_analytic_tag_ids = fields.Integer(string='Cap Analytic tag id')
     cap_name = fields.Char(string='Cap Name')
+    cap_last_name = fields.Char(string='Cap Last Name')
     cap_invoice_lines = fields.Char(string='Cap Invoice Lines')
     cap_state = fields.Integer(string='Cap State')
     cap_company_id = fields.Char(string='Cap Company ID')
