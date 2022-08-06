@@ -13,7 +13,7 @@
     'depends': ['base', 'sale'],
     'data': [
         'views/views.xml',
-        'views/cap_product_template.xml',
+        # 'views/cap_product_template.xml',
     ],
     'installable': True,
     'auto_install': False,
