@@ -8,4 +8,5 @@
                 <field name="cap_margin" placeholder="Margin"/>
             </xpath>
         </field>
+    </record>
 </odoo>
