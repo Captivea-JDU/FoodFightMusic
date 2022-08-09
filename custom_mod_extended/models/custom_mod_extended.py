@@ -41,7 +41,7 @@ class CustomModExtended(models.Model):
     cap_product_packaging_id = fields.Char(string='Cap Product Packaging ID')
     cap_selection_field = fields.Selection([('knowledge', 'Knowledge'),('wisdom', 'Wisdom'),('understanding', 'Understanding')], string='Cap Selection Field')
     cap_four_math = fields.Selection([('freedom', 'Freedom'),('culture', 'Culture'),('power', 'Power'),('refinement', 'Refinement')], string='Todays Mathmatics')
-    cap_ayo = fields.Char(string='Cap Ayo')
+    cap_ayo = fields.Many2one('res.partner', string='Call these folk')
     #@api.onchange('cap_year')
     #def calculate_age(cap_year):
         #cap_year = 2023
